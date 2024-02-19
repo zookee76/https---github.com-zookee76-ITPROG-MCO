@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import './signinpage.css'; 
 
 function signinpage() {
+
+    const navigate = useNavigate();
+    
+    const navigateCreateAccount = () => {
+        navigate('/createaccpage');
+        setShowNavbar(true);
+    }
+
     return (
         <div className="signin-fullscreen">
             <div className="form-container">
@@ -27,6 +36,9 @@ function signinpage() {
                         </div>
                         <button type="submit" className="signin-button">Sign in</button>
                     </form>
+   
+                    No account yet? <button onClick={navigateCreateAccount} className="text-button">Sign Up</button>
+                    
                 </div>
 
                 <div className="form-right">

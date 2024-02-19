@@ -82,4 +82,18 @@
     object-fit: contain;
 }
 
+.signup-link {
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.text-button {
+    background: none;
+    border: none;
+    color: grey; 
+    cursor: pointer;
+}
+
 
