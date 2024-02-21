@@ -12,15 +12,13 @@ import {
 
 function App() {
   return (
-    <>
-      <Router>
+    <Router>
         <Routes>
           <Route path="/" element={<PlaceholderContainer><SignInPage /></PlaceholderContainer>} /> 
           <Route path="/createaccpage" element={<PlaceholderContainer><CreateAccPage /></PlaceholderContainer>} />
           <Route path="/signinpage" element={<PlaceholderContainer><SignInPage /></PlaceholderContainer>} />
         </Routes>
       </Router>
-    </>
   );
 }
 

@@ -7,6 +7,9 @@ const Container = styled.div`
   align-items: center; 
   justify-content: center; 
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 `;
 
 const PlaceholderContainer = ({ children }) => {
