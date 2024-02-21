@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import './createaccpage.css'; 
 
-function createaccpage() {
+function createaccpage({ setShowNavbar }) {
 
     const navigate = useNavigate();
     
@@ -10,6 +10,10 @@ function createaccpage() {
         navigate('/signinpage');
         setShowNavbar(true);
     }
+
+    useLayoutEffect(() => {
+        setShowNavbar(false);
+    }, [])
 
     return (
         <div className="createacc-fullscreen">
@@ -41,7 +45,7 @@ function createaccpage() {
                         </div>
                         <div className="remember-forgot">
                         </div>
-                        <button type="submit" className="signin-button">Sign in</button>
+                        <button type="submit" className="createacc-button">Create Account</button>
                     </form>
    
                    <button onClick={navigateSignIn} className="text-button">Back</button>

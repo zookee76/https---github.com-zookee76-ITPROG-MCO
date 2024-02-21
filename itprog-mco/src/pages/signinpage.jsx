@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import './signinpage.css'; 
 
-function signinpage() {
+function signinpage({ setShowNavbar }) {
 
     const navigate = useNavigate();
     
@@ -11,13 +11,22 @@ function signinpage() {
         setShowNavbar(true);
     }
 
+    const navigateHome = () => {
+        navigate('/homepage');
+        setShowNavbar(true);
+    }
+
+    useLayoutEffect(() => {
+        setShowNavbar(false);
+    }, [])
+
     return (
         <div className="signin-fullscreen">
             <div className="form-container">
                 <div className="form-left">
                     <div className="sign-text">Sign In</div>
                     
-                    <form className="login-form">
+                    <form className="login-form" onSubmit={navigateHome}>
                         <div className="input-group">
                             <input
                                 id="email"
