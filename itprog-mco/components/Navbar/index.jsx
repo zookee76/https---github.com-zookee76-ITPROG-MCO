@@ -5,6 +5,7 @@ const Navbar = () => {
 
     const headingStyle = {
         marginRight: '30px',
+        color: 'black',
     };
 
     return (
@@ -15,7 +16,7 @@ const Navbar = () => {
                 <NavMenu>
                     <h3 style={headingStyle}>Sweet Tooth Inc.</h3>
                     <NavLink to="/homepage">Home</NavLink>
-                    <NavLink to="/shopage">Shop</NavLink>
+                    <NavLink to="/shoppage">Shop</NavLink>
                     <NavLink to="/aboutuspage">About Us</NavLink>
                 </NavMenu>
             </Nav>

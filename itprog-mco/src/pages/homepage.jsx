@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import './signinpage.css'; 
+import './homepage.css'; 
 
 function homepage({ setShowNavbar }) {
 
@@ -10,7 +10,7 @@ function homepage({ setShowNavbar }) {
 
     return (
         <div className="home-fullscreen">
-            hi
+            Welcome to Sweet Tooth Inc.
         </div>
     );
 }
