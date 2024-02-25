@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import './shoppage.css'; 
+import './setpage.css'; 
 
 function setpage({ setShowNavbar }) {
 
@@ -8,13 +8,13 @@ function setpage({ setShowNavbar }) {
         setShowNavbar(true);
     }, [])
     return (
-        <div className="shop-fullscreen">
-            <div className="shop-container">
-                <div className="shop-header">
+        <div className="set-fullscreen">
+            <div className="set-container">
+                <div className="set-header">
                     <h2>Shop Individual Items</h2>
                 </div>
 
-                <div className="shop-products">
+                <div className="set-products">
                     hi
                 </div>
                 
