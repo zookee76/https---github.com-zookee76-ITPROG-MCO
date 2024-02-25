@@ -5,6 +5,7 @@ import PlaceholderContainer from '../components/PlaceholderContainer';
 import CreateAccPage from "./pages/createaccpage";
 import HomePage from "./pages/homepage";
 import ShopPage from "./pages/shoppage";
+import SetPage from "./pages/setpage";
 import Navbar from '../components/Navbar';
 import { useState } from 'react';
 
@@ -27,6 +28,8 @@ function App() {
           <Route path="/signinpage" element={<PlaceholderContainer><SignInPage setShowNavbar={setShowNavbar}/></PlaceholderContainer>} />
           <Route path="/homepage" element={<PlaceholderContainer><HomePage setShowNavbar={setShowNavbar}/></PlaceholderContainer>} />
           <Route path="/shoppage" element={<PlaceholderContainer><ShopPage setShowNavbar={setShowNavbar}/></PlaceholderContainer>} />
+          <Route path="/setpage" element={<PlaceholderContainer><SetPage setShowNavbar={setShowNavbar}/></PlaceholderContainer>} />
+          
         </Routes>
       </Router>
   );

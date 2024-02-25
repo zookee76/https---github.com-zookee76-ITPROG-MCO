@@ -36,6 +36,7 @@ body {
     flex-direction: column;
     margin-top: 90px;
     justify-content: center;
+    overflow: auto;
 }
 
 .shop-header {
@@ -43,14 +44,18 @@ body {
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: -15px;
+    
 }
 
 .shop-products {
     display: flex;
     width: 100%;
     height: 90%;
-    background-color: red;
+    background-color: white;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
 }
   
   

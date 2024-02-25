@@ -16,6 +16,13 @@ function ProductList() {
     }));
   };
 
+  
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleCategorySelect = (categoryId) => {
+    setSelectedCategory(categoryId);
+  };
+
   const products = [
     { id: 1, category: 1, name: 'Product 1', price: 7.5, stock: 10, initialCount: 0 },
     { id: 2, category: 1, name: 'Product 2', price: 7.5, stock: 10, initialCount: 0 },
@@ -28,14 +35,22 @@ function ProductList() {
   ]; /* THESE ARE TEMPORARY HARDCODED PRODUCT VALUES SINCE BACKEND NEEDS TO BE CODED */
 
   return (
-    <div className="product-container">
-        {products.map(product => (
-            <div key={product.id} className="individual-product-container">
+    <div className="product-filter">
+      <button onClick={() => handleCategorySelect(null)} className="category-button">All</button>
+      <button onClick={() => handleCategorySelect(1)} className="category-button">Chocolate</button>
+      <button onClick={() => handleCategorySelect(2)} className="category-button">Candy</button>
+      <button onClick={() => handleCategorySelect(3)} className="category-button">Pastries</button>
+      <button onClick={() => handleCategorySelect(4)} className="category-button">Cake</button>
+
+      <div className="product-container">
+          {products.filter(product => selectedCategory === null || product.category === selectedCategory)
+            .map(product => (
+              <div key={product.id} className="individual-product-container">
                 <div className="icon-container">
-                    {product.category == 1 && <GiChocolateBar />}
-                    {product.category == 2 && <TbCandy />}
-                    {product.category == 3 && <LuCroissant />}
-                    {product.category == 4 && <BsFillCakeFill />}
+                  {product.category == 1 && <GiChocolateBar />}
+                  {product.category == 2 && <TbCandy />}
+                  {product.category == 3 && <LuCroissant />}
+                  {product.category == 4 && <BsFillCakeFill />}
                 </div>
                 <h3>{product.name}</h3>
                 <Counter 
@@ -43,7 +58,7 @@ function ProductList() {
                     onCountChange={onCountChange} 
                 />
                 <button className="add-to-cart-button">
-                    Add to Cart
+                  Add to Cart
                 </button>
 
                 <div className="price-stock-container">
@@ -55,8 +70,9 @@ function ProductList() {
                         <h4>{product.stock} Pieces Left</h4>
                     </div>
                 </div>
-            </div>
-        ))}
+              </div>
+          ))}
+      </div>
     </div>
   );
 }
