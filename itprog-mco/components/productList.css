@@ -58,6 +58,7 @@
     justify-content: space-between;
     flex-direction: row;
     width: 75%;
+    gap: 20px
 }
 
 .price-container {
