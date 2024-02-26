@@ -129,6 +129,15 @@ function cartpage({ setShowNavbar }) {
                     </div>
                 </div>
 
+                <div className="payment">
+                ₱
+                    <input
+                        id="payment-amount"
+                        type="payment-amount"  
+                        placeholder="Payment Amount"  
+                    />
+                </div>
+
                 <button className="checkout-button">
                     Checkout
                 </button>
