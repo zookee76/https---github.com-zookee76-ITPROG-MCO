@@ -10,7 +10,7 @@ export const Nav = styled.nav`
 	padding: 0.5rem 1rem;
 	z-index: 12;
     margin-top: 20px;
-    margin-left: 12%;
+    margin-left: 11.5vw;
     width: 75%;
     position: absolute;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

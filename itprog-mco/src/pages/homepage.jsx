@@ -10,7 +10,7 @@ function homepage({ setShowNavbar }) {
 
     return (
         <div className="home-fullscreen">
-            Welcome to Sweet Tooth Inc.
+            <img src="./images/swtooth.png" alt="logo" /> 
         </div>
     );
 }

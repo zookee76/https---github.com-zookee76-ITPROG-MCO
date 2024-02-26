@@ -57,5 +57,13 @@ body {
     flex-wrap: wrap;
     overflow: auto;
 }
+
+.shop-products::-webkit-scrollbar {
+    width: 0px; 
+}
+
+.shop-products::-webkit-scrollbar-thumb {
+    background: white;
+}
   
   

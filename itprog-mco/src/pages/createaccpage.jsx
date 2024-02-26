@@ -53,7 +53,7 @@ function createaccpage({ setShowNavbar }) {
                 </div>
 
                 <div className="form-right">
-                    <img src="./images/bakery.webp" alt="bakery" /> {/* will replace this with the logo lanz makes */}
+                    <img src="./images/swtooth.png" alt="logo" /> 
                 </div>
             </div>
         </div>

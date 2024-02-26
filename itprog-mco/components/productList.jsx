@@ -9,10 +9,12 @@ import { TbCandy } from "react-icons/tb";
 import { LuCroissant } from "react-icons/lu";
 
 function ProductList() {
+  
   const [item, setitem] = useState([]);
   useEffect(() => {
     getitem();
   }, []);
+
   function getitem() {
       axios.get('http://localhost/api/').then(function(response) {
           console.log(response.data);
@@ -44,7 +46,7 @@ function ProductList() {
       <button onClick={() => handleCategorySelect(4)} className="category-button">Cake</button>
 
       <div className="product-container">
-          {item.filter(product => selectedCategory === null || product.category === selectedCategory)
+          {item.filter(product => selectedCategory === null || product.category_id === selectedCategory)
             .map(product => (
               <div key={product.item_id} className="individual-product-container">
                 <div className="icon-container">
