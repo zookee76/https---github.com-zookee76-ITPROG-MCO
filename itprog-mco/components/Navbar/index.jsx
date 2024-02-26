@@ -3,7 +3,8 @@ import { Nav, NavLink, Bars, NavMenu } from "./NavbarElements";
 import { FaHome } from "react-icons/fa";
 import { FaShop } from "react-icons/fa6";
 import { FaBox } from "react-icons/fa";
-import { IoMdInformationCircle } from "react-icons/io";
+import { IoCartOutline } from "react-icons/io5";
+import { MdLogout } from "react-icons/md";
 
 const Navbar = () => {
 
@@ -22,7 +23,8 @@ const Navbar = () => {
                     <NavLink to="/homepage"><FaHome style={{ marginRight: '5px' }} />Home</NavLink>
                     <NavLink to="/shoppage"><FaShop style={{ marginRight: '5px' }} />Shop</NavLink>
                     <NavLink to="/setpage"><FaBox style={{ marginRight: '5px' }} />Make a Set</NavLink>
-                    <NavLink to="/aboutuspage"><IoMdInformationCircle style={{ marginRight: '5px' }} />About Us</NavLink>
+                    <NavLink to="/cartpage"><IoCartOutline style={{ marginRight: '5px' }} />Cart</NavLink>
+                    <NavLink to="/signinpage"><MdLogout style={{ marginRight: '5px' }} />Log Out</NavLink>
                 </NavMenu>
             </Nav>
         </>
